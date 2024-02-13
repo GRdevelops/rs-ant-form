@@ -6,15 +6,12 @@ import { countries } from '@/data/countries'
 
 export const AntForm = () => {
   const [form] = Form.useForm()
-  const [ data, setData ] = useState()
   const formWidth = '180'
 
 	const formItemLayout = { labelCol: { span: formWidth }, wrapperCol: { span: formWidth } }
 	const buttonItemLayout = { wrapperCol: { span: formWidth, offset: 0 } }
 
 	const onFinish = (values: any) => {
-    setData(values)
-		console.log('Success:', data)
     console.log('Success:', values)
 	}
 	const onFinishFailed = (errorInfo: any) => {
